@@ -1,5 +1,18 @@
+//! A simple echo crate
 use clap::{App, Arg};
 
+/// Parses commandline arguments and echoes response.
+///
+/// This short method contains the whole program, which echoes back the
+/// commandline arguments. It will also parse a "-n" option to omit a newline
+/// character at the end of the output.
+/// # Examples
+///
+/// Basic usage:
+///
+/// ```
+/// echor "hello world"
+/// ```
 fn main() {
     // parse the command line
     let matches = App::new("echor")
